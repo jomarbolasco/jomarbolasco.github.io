@@ -1,0 +1,2 @@
+git remote add origin https://github.com/jomarbolasco/personal-website.git
+git push -u origin main

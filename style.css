@@ -1,3 +1,6 @@
+body {
+}
+
 .my-bg-primary {
   background-color: #576cbc;
 }
@@ -12,4 +15,8 @@
 
 .my-bg-color {
   background-color: #04152d;
+}
+
+.navbar a {
+  color: white;
 }
