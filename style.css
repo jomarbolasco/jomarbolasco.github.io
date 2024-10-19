@@ -20,3 +20,17 @@ body {
 .navbar a {
   color: white;
 }
+
+/* hero */
+
+.hero-img {
+  width: 500px;
+}
+
+.hero-h1 {
+  font-size: 80px;
+}
+
+.hero-p {
+  font-size: 25px;
+}
