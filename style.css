@@ -1,6 +1,26 @@
 /* Medium screens (e.g., tablets)  @media (max-width: 992px) { }*/
 /* Small screens (e.g., phones)  @media (max-width: 576px) { }*/
 
+.color-orange {
+  color: orangered;
+}
+
+.color-blue {
+  color: blue;
+}
+
+.color-yellow {
+  color: yellow;
+}
+
+.color-skyblue {
+  color: skyblue;
+}
+
+.color-green {
+  color: green;
+}
+
 .my-bg-primary {
   background-color: #576cbc;
 }
@@ -72,7 +92,7 @@
 /* personal info */
 
 .info-img {
-  width: 500px;
+  width: 160px;
 }
 
 /* info medium screen */
