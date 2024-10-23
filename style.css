@@ -125,3 +125,11 @@
     font-size: 12px;
   }
 }
+
+/* about */
+
+@media (max-width: 576px) {
+  .skills-list-about {
+    font-size: 80%;
+  }
+}
