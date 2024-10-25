@@ -17,7 +17,7 @@
   </head>
   <body class="my-bg-color">
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark my-bg-dark">
+    <nav class="navbar navbar-expand-xl navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand py-2 px-4" href="#"><b>Jomar's Website</b></a>
         <button
@@ -51,12 +51,15 @@
     </nav>
 
     <!-- hero -->
-    <div class="container-fluid vh-100 hero-section">
-      <div class="row align-items-center h-100">
+    <div class="container-fluid vh-100">
+      <div class="container-fluid">
+        <div class="row"></div>
+      </div>
+      <div class="row p-xl-5">
         <div
-          class="col-lg-6 col-md-12 text-white text-center text-lg-end p-5 order-lg-0 order-md-1 order-1"
+          class="col-xl-6 col-md-12 col-sm-12 text-white text-end p-xl-5 p-md-5 p-5 order-xl-0 order-md-1 order-last text-xl-end text-md-center text-center"
         >
-          <h1 class="hero-h1">Hi, I'm Jomar</h1>
+          <h1 class="hero-h1">Hi, i'm Jomar</h1>
           <p class="hero-p">
             I'm a full-stack developer with 0 years of experience using React
             and NodeJS. Reach out if you'd like to learn more!
@@ -78,29 +81,33 @@
             </a>
           </div>
         </div>
-        <div class="col-lg-6 col-md-12 text-center p-3 order-md-0 order-sm-0">
+        <div
+          class="col-xl-6 col-md-12 col-sm-12 p-xl-0 p-md-0 p-5 order-xl-1 order-md-0 order-start"
+        >
+          <br />
           <img
-            class="hero-img rounded-circle img-fluid mx-auto"
+            class="hero-img rounded-circle img-fluid mx-auto d-block"
             src="./images/hero/BOLASCO, JOMAR.png"
-            alt="Jomar Bolasco"
+            alt=""
           />
         </div>
       </div>
     </div>
 
     <!-- about -->
-    <div class="container-fluid mt-lg-0 mt-md-0 mt-5 vh-100">
+    <div class="container-fluid mt-xl-0 mt-md-0 mt-5 vh-100">
       <div class="contaianer my-bg-simidark rounded-4 p-3">
         <div class="row">
-          <div class="col-lg-2 col-md-3 col-3">
+          <div class="col-xl-2 col-md-3 col-3">
             <img
               class="info-img rounded-circle mx-auto d-block border border-4 border-white"
               src="./images/hero/gradpic.jpg"
               alt=""
             />
           </div>
+
           <div
-            class="col-lg-8 col-md-9 col-9 text-white border-bottom border-1 pb-2 order-lg-1 order-2 order-1"
+            class="col-xl-8 col-md-9 col-9 text-white border-bottom border-1 pb-2 order-2 order-xl-1"
           >
             <h1 class="info-h1 pb-1">Jomar Lupos Bolasco</h1>
             <p class="info-p pe-5">
@@ -110,7 +117,7 @@
             </p>
 
             <!-- skills -->
-            <div class="skills-list d-lg-flex d-md-flex d-none flex-wrap">
+            <div class="skills-list d-xl-flex d-md-flex d-none flex-wrap">
               <div
                 class="skill-item d-flex align-items-center mb-3 me-4 color-orange"
               >
@@ -158,7 +165,7 @@
 
           <!-- about link buttons -->
           <div
-            class="col-lg-2 col-md-0 col-0 order-3 order-lg-2 d-none d-lg-block"
+            class="col-xl-2 col-md-0 col-0 order-3 order-xl-2 d-none d-xl-block"
           >
             <div class="btn-container">
               <a
@@ -193,7 +200,7 @@
           </div>
         </div>
         <!-- skills small screen-->
-        <div class="skills-list-about d-lg-none d-md-none d-flex flex-wrap">
+        <div class="skills-list-about d-xl-none d-md-none d-flex flex-wrap">
           <div
             class="skill-item d-flex align-items-center mb-3 me-4 color-orange"
           >

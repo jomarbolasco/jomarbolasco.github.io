@@ -1,11 +1,6 @@
 /* Medium screens (e.g., tablets)  @media (max-width: 992px) { }*/
 /* Small screens (e.g., phones)  @media (max-width: 576px) { }*/
 /* large screen @media (min-width: 992px) */
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
 
 .color-orange {
   color: orangered;
@@ -47,13 +42,8 @@ body {
   background-color: rgba(12, 12, 12, 0.6);
 }
 
-/* navbar */
-
 .navbar a {
   color: white;
-}
-.navbar-toggler-icon {
-  filter: invert(1);
 }
 
 /* hero */
