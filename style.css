@@ -2,6 +2,12 @@
 /* Medium screens (e.g., tablets) @media (max-width: 991.98px)*/
 /* Small screens (e.g., phones) @media (max-width: 575.98px)*/
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
 .color-orange {
   color: orangered;
 }
@@ -42,22 +48,113 @@
   background-color: rgba(12, 12, 12, 0.6);
 }
 
+/* navbar */
 .navbar a {
   color: white;
 }
 
+.navbar-social {
+  display: flex;
+  gap: 15px;
+  margin-left: 20px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.navbar-social a {
+  font-size: 1.5rem;
+  color: white;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.navbar-social a:hover {
+  transform: scale(1.2);
+}
+
+.navbar.scrolled .navbar-social {
+  display: flex !important;
+  opacity: 1;
+}
+
 /* hero */
+
+.hero-section {
+  background-image: url(./images/hero/me\ no\ bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 75% center;
+}
 
 .hero-img {
   width: 450px;
 }
 
-.hero-h1 {
-  font-size: 80px;
-}
-
 .hero-p {
   font-size: 25px;
+}
+
+/* Social Icons Styles */
+.social-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-btn {
+  font-size: 2rem;
+  color: white;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-btn:hover {
+  transform: scale(1.2);
+  color: #00acee; /* Change to desired hover color */
+}
+
+/* Specific Colors */
+.facebook:hover {
+  color: #1877f2;
+}
+
+.github:hover {
+  color: #333;
+}
+
+.email:hover {
+  color: #ea4335;
+}
+
+/* Contact Button Styles */
+.contact-btn {
+  position: relative;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1.2rem;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.contact-number {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 1rem;
+}
+
+.contact-btn:hover .contact-number {
+  display: block;
 }
 
 /* hero medium screen */
@@ -140,4 +237,31 @@
 
 .navbar.scrolled {
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* hero text animation */
+.typing-container {
+  font-size: 4rem;
+  font-weight: bold;
+  /* color: white; */
+  height: 8rem;
+  display: inline-block;
+  /* border-right: 2px solid white; */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.typing-text {
+  display: inline-block;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }

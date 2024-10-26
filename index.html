@@ -15,11 +15,13 @@
     />
     <title>Personal Website</title>
   </head>
-  <body class="my-bg-color">
+  <body class="">
     <!-- navbar -->
     <nav class="navbar navbar-expand-xl navbar-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand py-2 px-4" href="#"><b>Jomar's Website</b></a>
+        <a class="navbar-brand py-2 px-4" href="/">
+          <b><span class="text-danger">J</span>omar's Website</b>
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -37,7 +39,7 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">About</a>
@@ -46,172 +48,77 @@
               <a class="nav-link" href="#">Projects</a>
             </li>
           </ul>
+          <!-- Hidden social buttons in the navbar -->
+          <div class="navbar-social d-none">
+            <a href="#" class="social-btn facebook" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="social-btn github" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:jomarbolasco98@gmail.com" class="social-btn email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
         </div>
       </div>
     </nav>
 
     <!-- hero -->
-    <div class="container-fluid vh-100">
+
+    <div class="container-fluid vh-100 my-bg-color p-1 hero-section">
       <div class="container-fluid">
-        <div class="row"></div>
-      </div>
-      <div class="row p-xl-5">
-        <div
-          class="col-xl-6 col-md-12 col-sm-12 text-white text-end p-xl-5 p-md-5 p-5 order-xl-0 order-md-1 order-last text-xl-end text-md-center text-center"
-        >
-          <h1 class="hero-h1">Hi, i'm Jomar</h1>
-          <p class="hero-p">
-            I'm a full-stack developer with 0 years of experience using React
-            and NodeJS. Reach out if you'd like to learn more!
-          </p>
-          <div class="hero-button">
-            <a
-              href="https://www.facebook.com/messages/t/100009163120468"
-              target="_blank"
-              class="contact-btn btn btn-primary me-2"
-            >
-              Contact Me
-            </a>
-            <a
-              href="https://drive.google.com/file/d/1Ky1Mkd_2jeyHQ4opmKmrldWvv5ftXOpJ/view?usp=drive_link"
-              target="_blank"
-              class="contact-btn btn btn-secondary"
-            >
-              My CV
-            </a>
+        <div class="row p-xl-5">
+          <div
+            class="col-xl-6 col-md-12 col-sm-12 text-white text-end p-xl-5 p-md-5 p-5 order-xl-0 order-md-1 order-last text-xl-end text-md-center text-center"
+          >
+            <br /><br /><br /><br />
+            <h6 class="hero-h1 text-start fw-light fs-3">
+              - I Am Jomar Bolasco
+            </h6>
+            <div class="text-start">
+              <p class="typing-container">
+                <span class="typing" id="typing-text"></span>
+              </p>
+            </div>
+
+            <!-- Social Links and Contact Button -->
+            <div class="social-buttons text-start mt-4">
+              <a href="#" class="social-btn facebook" target="_blank">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#" class="social-btn github" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="mailto:jomarbolasco98@gmail.com"
+                class="social-btn email"
+              >
+                <i class="fas fa-envelope"></i>
+              </a>
+
+              <button class="contact-btn" title="Click to show number">
+                Contact Me
+                <span class="contact-number">+639505401934</span>
+              </button>
+            </div>
           </div>
-        </div>
-        <div
-          class="col-xl-6 col-md-12 col-sm-12 p-xl-0 p-md-0 p-5 order-xl-1 order-md-0 order-start"
-        >
-          <br />
-          <img
-            class="hero-img rounded-circle img-fluid mx-auto d-block"
-            src="./images/hero/BOLASCO, JOMAR.png"
-            alt=""
-          />
+
+          <div
+            class="col-xl-6 col-md-12 col-sm-12 p-xl-0 p-md-5 p-5 order-xl-1 order-md-0 order-start"
+          >
+            <br />
+            <!-- <img
+              class="hero-img img-fluid mx-auto d-block"
+              src="./images/hero/me no bg.png"
+              alt="Jomar Bolasco"
+            /> -->
+          </div>
         </div>
       </div>
     </div>
 
     <!-- about -->
-    <div class="container-fluid mt-xl-0 mt-md-0 mt-5 vh-100">
-      <div class="contaianer my-bg-simidark rounded-4 p-3">
-        <div class="row">
-          <div class="col-xl-2 col-md-3 col-3">
-            <img
-              class="info-img rounded-circle mx-auto d-block border border-4 border-white"
-              src="./images/hero/gradpic.jpg"
-              alt=""
-            />
-          </div>
-
-          <div
-            class="col-xl-8 col-md-9 col-9 text-white border-bottom border-1 pb-2 order-2 order-xl-1"
-          >
-            <h1 class="info-h1 pb-1">Jomar Lupos Bolasco</h1>
-            <p class="info-p pe-5">
-              Aspiring full-stack developer with a passion for creating dynamic
-              and responsive web applications. Always learning and exploring new
-              technologies to improve my skillset.
-            </p>
-
-            <!-- skills -->
-            <div class="skills-list d-xl-flex d-md-flex d-none flex-wrap">
-              <div
-                class="skill-item d-flex align-items-center mb-3 me-4 color-orange"
-              >
-                <i class="fab fa-html5 skill-icon"></i>
-                <span class="ms-2">HTML</span>
-              </div>
-              <div
-                class="skill-item d-flex align-items-center mb-3 me-4 color-blue"
-              >
-                <i class="fab fa-css3-alt skill-icon"></i>
-                <span class="ms-2">CSS</span>
-              </div>
-              <div
-                class="skill-item d-flex align-items-center mb-3 me-4 color-yellow"
-              >
-                <i class="fab fa-js skill-icon"></i>
-                <span class="ms-2">JavaScript</span>
-              </div>
-              <div
-                class="skill-item d-flex align-items-center mb-3 me-4 color-skyblue"
-              >
-                <i class="fab fa-react skill-icon"></i>
-                <span class="ms-2">React.js</span>
-              </div>
-              <div
-                class="skill-item d-flex align-items-center mb-3 me-4 color-green"
-              >
-                <i class="fab fa-node-js skill-icon"></i>
-                <span class="ms-2">Node.js</span>
-              </div>
-              <div
-                class="skill-item d-flex align-items-center mb-3 me-4 color-skyblue"
-              >
-                <i class="fas fa-database skill-icon"></i>
-                <span class="ms-2">PostgreSQL</span>
-              </div>
-              <div
-                class="skill-item d-flex align-items-center mb-3 me-4 text-primary"
-              >
-                <i class="bi bi-bootstrap-fill skill-icon"></i>
-                <span class="ms-2">Bootstrap</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- about link buttons -->
-        </div>
-        <!-- skills small screen-->
-        <div class="skills-list-about d-xl-none d-md-none d-flex flex-wrap">
-          <div
-            class="skill-item d-flex align-items-center mb-3 me-4 color-orange"
-          >
-            <i class="fab fa-html5 skill-icon"></i>
-            <span class="ms-2">HTML</span>
-          </div>
-          <div
-            class="skill-item d-flex align-items-center mb-3 me-4 color-blue"
-          >
-            <i class="fab fa-css3-alt skill-icon"></i>
-            <span class="ms-2">CSS</span>
-          </div>
-          <div
-            class="skill-item d-flex align-items-center mb-3 me-4 color-yellow"
-          >
-            <i class="fab fa-js skill-icon"></i>
-            <span class="ms-2">JavaScript</span>
-          </div>
-          <div
-            class="skill-item d-flex align-items-center mb-3 me-4 color-skyblue"
-          >
-            <i class="fab fa-react skill-icon"></i>
-            <span class="ms-2">React.js</span>
-          </div>
-          <div
-            class="skill-item d-flex align-items-center mb-3 me-4 color-green"
-          >
-            <i class="fab fa-node-js skill-icon"></i>
-            <span class="ms-2">Node.js</span>
-          </div>
-          <div
-            class="skill-item d-flex align-items-center mb-3 me-4 color-skyblue"
-          >
-            <i class="fas fa-database skill-icon"></i>
-            <span class="ms-2">PostgreSQL</span>
-          </div>
-          <div
-            class="skill-item d-flex align-items-center mb-3 me-4 text-primary"
-          >
-            <i class="bi bi-bootstrap-fill skill-icon"></i>
-            <span class="ms-2">Bootstrap</span>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!--  -->
   </body>
