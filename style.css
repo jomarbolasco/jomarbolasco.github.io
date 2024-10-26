@@ -31,7 +31,7 @@
 }
 
 .my-bg-dark {
-  background-color: #0b2447;
+  background-color: hwb(215 4% 72%);
 }
 
 .my-bg-color {
@@ -127,14 +127,17 @@
   }
 }
 
-/* about */
-
+/* navbar scroll */
 @media (max-width: 576px) {
   .skills-list-about {
     font-size: 80%;
   }
 }
 
-/* about buttons */
+.navbar {
+  transition: background-color 0.3s ease-in-out;
+}
 
-/* about buttons large screen */
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+}

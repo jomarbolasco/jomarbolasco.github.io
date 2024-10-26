@@ -1,3 +1,8 @@
-console.log("Jomar Bolasco");
-// alert("Welcome to my site");
-console.log(5 + 6 - 1);
+window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
