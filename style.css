@@ -75,6 +75,21 @@ body {
   opacity: 1;
 }
 
+/* navbar scroll */
+@media (max-width: 576px) {
+  .skills-list-about {
+    font-size: 80%;
+  }
+}
+
+.navbar {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 /* hero */
 
 .hero-img {
@@ -83,6 +98,33 @@ body {
 
 .hero-p {
   font-size: 25px;
+}
+
+/* hero text animation */
+.typing-container {
+  font-size: 4rem;
+  font-weight: bold;
+  /* color: white; */
+  height: 8rem;
+  display: inline-block;
+  /* border-right: 2px solid white; */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.typing-text {
+  display: inline-block;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 
 /* Social Icons Styles */
@@ -157,108 +199,72 @@ body {
   background-position: 75% center;
 }
 
-/* hero medium screen */
+/* hero medium screen */ /*/////////////////////////////////////////////*/
 @media (max-width: 1024px) {
   .hero-section {
     background-size: 200%;
     background-position: 20% center;
   }
 
-  .hero-img {
-    width: 300px;
+  .hero-section::before {
+    content: ""; /* Required for pseudo-element */
+    position: absolute; /* Position it over the hero section */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2); /* Black with 50% opacity */
+    z-index: 1; /* Place it above the background but below the content */
   }
 
-  .hero-h1 {
-    font-size: 3rem;
+  .hero-content {
+    position: relative; /* Ensure the content is above the overlay */
+    z-index: 2; /* Place content above the overlay */
   }
 }
 
 /* hero small screen */
-@media (max-width: 576px) {
-  .hero-img {
-    width: 300px;
+@media (max-width: 430px) {
+  .hero-section {
+    background-size: 250%;
+    background-position: 20% center;
   }
 
-  .hero-h1 {
+  .hero-section::before {
+    content: ""; /* Required for pseudo-element */
+    position: absolute; /* Position it over the hero section */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* Place it above the background but below the content */
+  }
+
+  .hero-content {
+    position: relative; /* Ensure the content is above the overlay */
+    z-index: 2; /* Place content above the overlay */
+  }
+
+  .typing-container {
     font-size: 3rem;
-  }
-}
-
-/* personal info */
-
-.info-img {
-  width: 160px;
-}
-
-/* info medium screen */
-@media (max-width: 992px) {
-  .info-h1 {
-    font-size: 2rem;
+    height: 5rem;
   }
 
-  .info-p {
-    font-size: 0.9rem;
-  }
-}
-
-/* info small screen */
-@media (max-width: 576px) {
-  .info-h1 {
-    font-size: 0.9rem;
+  .social-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
   }
 
-  .info-p {
-    font-size: 0.7rem;
+  .social-btn {
+    font-size: 25px;
+    color: white;
+    transition: transform 0.3s, color 0.3s;
   }
 
-  .info-img {
-    width: 100%;
-  }
-
-  .btn-xs {
-    padding: 4px 8px;
-    font-size: 12px;
-  }
-}
-
-/* navbar scroll */
-@media (max-width: 576px) {
-  .skills-list-about {
-    font-size: 80%;
-  }
-}
-
-.navbar {
-  transition: background-color 0.3s ease-in-out;
-}
-
-.navbar.scrolled {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* hero text animation */
-.typing-container {
-  font-size: 4rem;
-  font-weight: bold;
-  /* color: white; */
-  height: 8rem;
-  display: inline-block;
-  /* border-right: 2px solid white; */
-  white-space: nowrap;
-  overflow: hidden;
-  width: 100%;
-}
-
-.typing-text {
-  display: inline-block;
-  border-right: 2px solid white;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 0;
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
+  .social-btn:hover {
+    transform: scale(1.2);
+    color: #00acee; /* Change to desired hover color */
   }
 }
