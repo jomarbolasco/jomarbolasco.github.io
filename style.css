@@ -2,6 +2,10 @@
 /* Medium screens (e.g., tablets) @media (max-width: 991.98px)*/
 /* Small screens (e.g., phones) @media (max-width: 575.98px)*/
 
+html {
+  scroll-padding-top: 62px; /* Adjust based on navbar height */
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -105,7 +109,7 @@ body {
   font-size: 4rem;
   font-weight: bold;
   /* color: white; */
-  height: 8rem;
+  height: 7rem;
   display: inline-block;
   /* border-right: 2px solid white; */
   white-space: nowrap;
@@ -122,7 +126,7 @@ body {
 }
 
 @keyframes blink {
-  50% {
+  90% {
     border-color: transparent;
   }
 }
@@ -194,7 +198,7 @@ body {
 
 .hero-section {
   background-image: url(./images/hero/me\ no\ bg.png);
-  background-size: contain;
+  background-size: 60%;
   background-repeat: no-repeat;
   background-position: 75% center;
 }
@@ -268,3 +272,56 @@ body {
     color: #00acee; /* Change to desired hover color */
   }
 }
+
+/* about section */
+body {
+  /* background-color: #1a1a1a; */
+}
+
+.about-us h2 {
+  color: #ff5252;
+  border-bottom: 3px solid #ff5252;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* .skills .progress-bar {
+  transition: width 0.5s;
+} */
+
+.info-img {
+  width: 160px;
+}
+
+/* info medium screen */
+@media (max-width: 992px) {
+  .info-h1 {
+    font-size: 2rem;
+  }
+
+  .info-p {
+    font-size: 0.9rem;
+  }
+}
+
+/* info small screen */
+@media (max-width: 576px) {
+  .info-h1 {
+    font-size: 0.9rem;
+  }
+
+  .info-p {
+    font-size: 0.7rem;
+  }
+
+  .info-img {
+    width: 100%;
+  }
+
+  .btn-xs {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}
+
+/* about */
