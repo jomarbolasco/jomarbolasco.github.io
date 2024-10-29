@@ -73,6 +73,67 @@ body {
   color: white;
 }
 
+.letter {
+  display: inline-block;
+  color: white;
+  animation: turnRed 2s infinite;
+  animation-delay: calc(var(--i) * 0.2s);
+}
+
+@keyframes turnRed {
+  0%,
+  80% {
+    color: white;
+  }
+  90%,
+  100% {
+    color: red;
+  }
+}
+
+.letter:nth-child(1) {
+  --i: 0;
+}
+.letter:nth-child(2) {
+  --i: 1;
+}
+.letter:nth-child(3) {
+  --i: 2;
+}
+.letter:nth-child(4) {
+  --i: 3;
+}
+.letter:nth-child(5) {
+  --i: 4;
+}
+.letter:nth-child(6) {
+  --i: 5;
+}
+.letter:nth-child(7) {
+  --i: 6;
+}
+.letter:nth-child(9) {
+  --i: 7;
+}
+.letter:nth-child(10) {
+  --i: 8;
+}
+.letter:nth-child(11) {
+  --i: 9;
+}
+.letter:nth-child(12) {
+  --i: 10;
+}
+.letter:nth-child(13) {
+  --i: 11;
+}
+.letter:nth-child(14) {
+  --i: 12;
+}
+.letter:nth-child(15) {
+  --i: 13;
+}
+
 .navbar-social {
   display: flex;
   gap: 15px;
