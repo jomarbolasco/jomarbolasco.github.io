@@ -134,6 +134,52 @@ body {
   --i: 13;
 }
 
+.custom-nav-link {
+  position: relative;
+  display: inline-block;
+  font-size: 1.1rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 8px 15px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.custom-nav-link:hover {
+  color: #ff4b5c;
+}
+
+/* Underline animation */
+.custom-nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+/* Expanding underline effect */
+.custom-nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-item.active .custom-nav-link {
+  color: red;
+  font-weight: bold;
+}
+
+@media (max-width: 991px) {
+  .custom-nav-link {
+    display: block;
+    text-align: center;
+  }
+}
+
 .navbar-social {
   display: flex;
   gap: 15px;
@@ -422,9 +468,20 @@ body {
 }
 
 /* carousel */
-.skills-list-wrapper {
+
+.modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-  white-space: nowrap;
+  height: 90vh;
+}
+
+.modal-body img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .skills-list {

@@ -63,3 +63,7 @@ function openDemo() {
   const modal = new bootstrap.Modal(document.getElementById("demoModal"));
   modal.show();
 }
+
+function showImage(src) {
+  document.getElementById("modalImage").src = src;
+}

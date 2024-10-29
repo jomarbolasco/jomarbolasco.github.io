@@ -62,13 +62,15 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#hero-section">Home</a>
+              <a class="nav-link custom-nav-link" href="#hero-section">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about-section">About</a>
+              <a class="nav-link custom-nav-link" href="#about-section"
+                >About</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#project">Projects</a>
+              <a class="nav-link custom-nav-link" href="#project">Projects</a>
             </li>
           </ul>
           <!-- Social buttons in the navbar -->
@@ -262,6 +264,7 @@
                     alt="Certificate 1"
                     data-bs-toggle="modal"
                     data-bs-target="#imageModal"
+                    onclick="showImage('./images/certificates/html.png')"
                   />
                 </div>
                 <div class="carousel-item">
@@ -269,6 +272,9 @@
                     src="./images/certificates/css.png"
                     class="d-block w-100"
                     alt="Certificate 2"
+                    data-bs-toggle="modal"
+                    data-bs-target="#imageModal"
+                    onclick="showImage('./images/certificates/css.png')"
                   />
                 </div>
                 <div class="carousel-item">
@@ -276,6 +282,9 @@
                     src="./images/certificates/java.png"
                     class="d-block w-100"
                     alt="Certificate 3"
+                    data-bs-toggle="modal"
+                    data-bs-target="#imageModal"
+                    onclick="showImage('./images/certificates/java.png')"
                   />
                 </div>
               </div>
@@ -303,6 +312,39 @@
                 ></span>
                 <span class="visually-hidden">Next</span>
               </button>
+            </div>
+          </div>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="imageModal"
+            tabindex="-1"
+            aria-labelledby="imageModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="imageModalLabel">
+                    Certificate Image
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <img
+                    id="modalImage"
+                    src=""
+                    class="img-fluid"
+                    alt="Certificate"
+                  />
+                </div>
+              </div>
             </div>
           </div>
 
@@ -524,5 +566,6 @@
   </body>
 
   <script src="./bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+
   <script src="./main.js"></script>
 </html>
