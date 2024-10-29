@@ -13,7 +13,7 @@ window.addEventListener("scroll", function () {
 });
 
 // hero text
-const words = ["DEVELOPER", "FREELANCER", "DESIGNER"]; // Words to be typed
+const words = ["DEVELOPER", "FREELANCER", "STUDENT"]; // Words to be typed
 let currentWordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -52,7 +52,9 @@ setTimeout(typeWords, delayBetweenWords);
 
 function openModal(imgElement) {
   var modalImage = document.getElementById("modalImage");
-  modalImage.src = imgElement.src; // Set the image source in the modal
+  modalImage.src = imgElement.src; // Set the image source correctly
+  const modal = new bootstrap.Modal(document.getElementById("imageModal"));
+  modal.show(); // Display the modal
 }
 
 function openDemo() {
