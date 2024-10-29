@@ -3,7 +3,7 @@
 /* Small screens (e.g., phones) @media (max-width: 575.98px)*/
 
 html {
-  scroll-padding-top: 62px; /* Adjust based on navbar height */
+  scroll-padding-top: 62px;
 }
 
 body {
@@ -332,78 +332,55 @@ body {
   margin: 0 auto;
 }
 
-.sidebar-menu .list-group-item {
-  background-color: #242526;
-  color: #e4e6eb;
-  border: none;
-  cursor: pointer;
-}
-.sidebar-menu .list-group-item.active {
-  background-color: #3a3b3c;
-}
-.profile-card {
-  background-color: #242526;
-  border: none;
-}
-.profile-card .card-body {
-  padding: 20px;
-}
-.profile-item {
-  background-color: #242526;
-  color: #e4e6eb;
-  border-top: 1px solid #3a3b3c;
-  padding: 15px 0;
-}
-.profile-item i {
-  margin-right: 10px;
-  color: #b0b3b8;
-}
-.profile-item div {
-  display: flex;
-  align-items: center;
-}
-.edit-icon,
-.privacy-icon {
-  color: #b0b3b8;
-  cursor: pointer;
-}
-.profile-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: bold;
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-}
-.add-workplace-link {
-  color: #2d88ff;
-  font-size: 0.9rem;
+/* .my-bg-color {
+  background: linear-gradient(
+    90deg,
+    #f0f0f0,
+    #e0e0e0
+  ); 
+  padding: 20px 0;
+} */
+
+.skills-title h4 {
+  margin: 0;
+  letter-spacing: 1px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .sidebar-menu {
-    margin-bottom: 20px;
-  }
-  .profile-card .card-body {
-    padding: 15px;
-  }
-  .profile-heading {
-    font-size: 1rem;
-  }
-  .add-workplace-link {
-    font-size: 0.8rem;
-  }
+.skill-icon {
+  font-size: 24px;
 }
 
-@media (max-width: 576px) {
-  .sidebar-menu ul {
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
+/* Scrolling Skills */
+.skills-list-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.skills-list {
+  display: inline-flex;
+  animation: scroll-left 20s linear infinite;
+}
+
+.skill-item {
+  padding: 10px 20px;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  border-radius: 8px;
+  transition: transform 0.3s, background-color 0.3s;
+  white-space: nowrap;
+}
+
+.skill-item:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Scrolling Animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
   }
-  .sidebar-menu .list-group-item {
-    flex: 1;
-    text-align: center;
+  100% {
+    transform: translateX(-100%);
   }
 }
