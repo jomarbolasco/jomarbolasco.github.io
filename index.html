@@ -20,87 +20,55 @@
     />
     <title>Personal Website</title>
   </head>
+
   <body class="my-bg-color">
-    <!-- navbar -->
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        />
-        <link rel="stylesheet" href="./style.css" />
-        <title>Personal Website</title>
-      </head>
-      <body class="my-bg-color">
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-xl navbar-dark fixed-top my-navbar">
-          <div class="container">
-            <a class="navbar-brand py-2 px-4" href="/">
-              <b><span class="text-danger">J</span>omar's Website</b>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-dark fixed-top my-navbar">
+      <div class="container">
+        <a class="navbar-brand py-2 px-4" href="/">
+          <b><span class="text-danger">J</span>omar's Website</b>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#hero-section">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about-section">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#project">Projects</a>
+            </li>
+          </ul>
+          <!-- Social buttons in the navbar -->
+          <div class="navbar-social d-none d-xl-flex ms-3">
+            <a href="#" class="social-btn facebook" target="_blank">
+              <i class="fab fa-facebook"></i>
             </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div
-              class="collapse navbar-collapse justify-content-end"
-              id="navbarNav"
-            >
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="#hero-section">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#about-section">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#project">Projects</a>
-                </li>
-              </ul>
-              <!-- Social buttons in the navbar -->
-              <div class="navbar-social d-none d-xl-flex ms-3">
-                <a href="#" class="social-btn facebook" target="_blank">
-                  <i class="fab fa-facebook"></i>
-                </a>
-                <a href="#" class="social-btn github" target="_blank">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a
-                  href="mailto:jomarbolasco98@gmail.com"
-                  class="social-btn email"
-                >
-                  <i class="fas fa-envelope"></i>
-                </a>
-              </div>
-            </div>
+            <a href="#" class="social-btn github" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:jomarbolasco98@gmail.com" class="social-btn email">
+              <i class="fas fa-envelope"></i>
+            </a>
           </div>
-        </nav>
-
-        <!-- Content Sections (as in your original code) -->
-
-        <div class="container-fluid my-bg-simidark p-3 mt-3 text-center">
-          <p>&copy; 2024 Jomar L. Bolasco. All rights reserved.</p>
         </div>
-
-        <!-- JavaScript Files -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="./main.js"></script>
-      </body>
-    </html>
+      </div>
+    </nav>
 
     <!-- hero -->
     <div
@@ -133,10 +101,10 @@
                 <i class="fas fa-envelope"></i>
               </a>
 
-              <button class="contact-btn" title="my number">
+              <!-- <button class="contact-btn" title="my number">
                 Contact Me
                 <span class="contact-number">+639505401934</span>
-              </button>
+              </button> -->
             </div>
           </div>
         </div>
@@ -166,14 +134,39 @@
             <p>NickName: Jboy</p>
           </div>
           <div
-            class="col-lg-2 col-md-0 col-0 order-3 order-lg-2 text-center mt-3 mt-lg-0"
+            class="col-lg-2 col-md-0 col-0 order-3 order-lg-2 text-center mt-lg-0"
           >
             <div>
-              <ul class="text-start list-unstyled d-none d-lg-block">
-                <li>Interest</li>
-                <li>Mobile Games</li>
-                <li>Computer Games</li>
-                <li>Taekwondo</li>
+              <ul
+                class="text-start list-unstyled d-none d-lg-block interests-list rounded-3 shadow-sm"
+              >
+                <li class="interest-item title-item mb-3 text-start">
+                  <span class="text-uppercase">Interest</span>
+                </li>
+                <li class="interest-item d-flex align-items-center mb-2">
+                  <span
+                    class="icon-wrapper bg-primary text-white rounded-circle me-3"
+                  >
+                    <i class="fas fa-gamepad"></i>
+                  </span>
+                  <span>Gaming</span>
+                </li>
+                <li class="interest-item d-flex align-items-center mb-2">
+                  <span
+                    class="icon-wrapper bg-warning text-white rounded-circle me-3"
+                  >
+                    <i class="fas fa-bicycle"></i>
+                  </span>
+                  <span>Rides</span>
+                </li>
+                <li class="interest-item d-flex align-items-center">
+                  <span
+                    class="icon-wrapper bg-success text-white rounded-circle me-3"
+                  >
+                    <i class="fas fa-fist-raised"></i>
+                  </span>
+                  <span>Taekwondo</span>
+                </li>
               </ul>
             </div>
           </div>
@@ -181,18 +174,15 @@
       </div>
     </div>
 
-    <!--  -->
+    <!-- skills-->
     <div
       class="container-fluid vh-25 my-bg-color overflow-hidden d-flex align-items-center"
     >
       <div class="container d-flex align-items-center">
-        <!-- Static Skills Title -->
         <div class="skills-title d-flex align-items-center me-4">
           <i class="fas fa-star skill-icon me-2 text-warning"></i>
           <h4 class="text-uppercase fw-bold text-primary">Skills</h4>
         </div>
-
-        <!-- Scrolling Skills -->
         <div class="skills-list-wrapper flex-grow-1">
           <div class="skills-list d-flex">
             <div class="skill-item d-flex align-items-center me-4 color-orange">
@@ -232,13 +222,11 @@
       </div>
     </div>
 
-    <!-- Carousel and Content Section -->
-
+    <!-- Carousel and educ -->
     <div class="container-flex">
       <div class="container my-bg-simidark rounded-4">
         <div class="row">
           <div class="col-lg-4 col-12 order-1">
-            <!-- Carousel for Certificates -->
             <h3
               class="fw-bold text-lg-center mb-1 text-primary mt-3 ps-lg-0 ps-4"
             >
@@ -301,44 +289,10 @@
             </div>
           </div>
 
-          <!-- Image Modal -->
-          <div
-            class="modal fade"
-            id="imageModal"
-            tabindex="-1"
-            aria-labelledby="imageModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-              <div class="modal-content">
-                <div class="modal-body">
-                  <img
-                    id="modalImage"
-                    src="./"
-                    alt="Modal Image"
-                    class="img-fluid"
-                    style="width: 100%"
-                  />
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="col-12 col-lg-8 d-flex align-items-center">
-            <!-- Educational Background Section -->
             <div class="education-background w-100 p-4 rounded shadow-lg">
               <h4 class="fw-bold mb-4 text-primary">Educational Background</h4>
-
               <div class="timeline">
-                <!-- College -->
                 <div
                   class="timeline-item mb-3 position-relative rounded overflow-hidden"
                 >
@@ -358,14 +312,14 @@
             </div>
           </div>
         </div>
+
+        <!-- work -->
         <div class="row">
-          <!-- work -->
           <div class="experience-section container py-5 mt-4 my-bg-color">
             <h2 class="text-primary mb-5 text-center">Work Experience</h2>
             <div
               class="experience-item row align-items-center p-4 my-bg-simidark rounded-3 shadow-lg"
             >
-              <!-- Experience Text -->
               <div class="col-md-6 col-sm-12 text-white">
                 <h3 class="company-name text-primary mb-2">
                   Millenium Gallery Motors, Inc.
@@ -386,16 +340,16 @@
                     Insurance monitoring, updating, and encoding in the system
                   </li>
                   <li class="mb-2">
-                    <i class="fas fa-check-circle text-success me-2"></i> Gate
-                    Pass monitoring and recording to the system
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Gate Pass monitoring and recording to the system
                   </li>
                   <li class="mb-2">
                     <i class="fas fa-check-circle text-success me-2"></i>
                     Checking invoices and other billings
                   </li>
                   <li class="mb-2">
-                    <i class="fas fa-check-circle text-success me-2"></i> Repair
-                    order monitoring in ERA System
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Repair order monitoring in ERA System
                   </li>
                   <li class="mb-2">
                     <i class="fas fa-check-circle text-success me-2"></i>
@@ -403,8 +357,6 @@
                   </li>
                 </ul>
               </div>
-
-              <!-- Experience Image -->
               <div class="col-md-6 col-sm-12 text-center mt-4 mt-md-0">
                 <img
                   src="./images/work/Nissan-Butuan.jpg"
@@ -549,13 +501,11 @@
     </div>
 
     <!-- footer -->
-    <div class="container-fluid my-bg-simidark p-3 mt-3 text-center">
+    <div class="container-fluid my-bg-simidark p-3 mt-3 text-center text-white">
       <p>&copy; 2024 Jomar L. Bolasco. All rights reserved.</p>
     </div>
   </body>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
   <script src="./main.js"></script>
 </html>
