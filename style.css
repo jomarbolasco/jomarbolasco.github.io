@@ -12,6 +12,23 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.typing-container {
+  font-family: Arial, sans-serif; /* Substitute with the desired font family */
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 1px white; /* Creates the outline */
+  text-transform: uppercase;
+  font-size: 2rem; /* Adjust as needed */
+}
+
+.text-font {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  font-size: 2rem;
+}
+
 .color-orange {
   color: orangered;
 }
@@ -164,36 +181,47 @@ body {
 
 /* Contact Button Styles */
 .contact-btn {
-  position: relative;
-  background-color: transparent;
-  border: 2px solid white;
-  color: white;
-  font-size: 1.2rem;
-  padding: 8px 12px;
-  cursor: pointer;
-  transition: background-color 0.3s, border-color 0.3s;
+  background-color: #007bff; /* Primary color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Top/bottom and left/right padding */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  position: relative; /* Position for the span */
+  transition: background-color 0.3s ease; /* Smooth background color change */
+  display: inline-flex; /* Align items in the center */
+  align-items: center; /* Center the text and icon */
 }
 
 .contact-btn:hover {
-  background-color: white;
-  color: black;
+  background-color: #0056b3; /* Darker shade on hover */
 }
 
 .contact-number {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 5px 0;
-  font-size: 1rem;
+  display: none; /* Hide by default */
+  margin-left: 10px; /* Spacing from text */
+  font-weight: bold; /* Bold text for emphasis */
+  font-size: 14px; /* Font size for the number */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Light background for readability */
+  color: #007bff; /* Match with primary color */
+  padding: 2px 5px; /* Padding around the number */
+  border-radius: 3px; /* Rounded corners */
+  position: absolute; /* Positioning */
+  top: 100%; /* Below the button */
+  left: 50%; /* Centered */
+  transform: translateX(-50%); /* Center alignment */
+  white-space: nowrap; /* Prevent wrapping */
+  z-index: 1; /* Ensure it appears above other elements */
 }
 
 .contact-btn:hover .contact-number {
-  display: block;
+  display: inline; /* Show on hover */
 }
 
 .hero-section {
