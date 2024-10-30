@@ -248,6 +248,64 @@ body {
   width: 0;
 }
 
+/* Animated gradient background for button */
+.btn-awesome {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Button hover effect: expand background with animation */
+.btn-awesome::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 100%;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.btn-awesome:hover::before {
+  left: 0;
+}
+
+.btn-awesome:hover {
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes blink {
   90% {
     border-color: transparent;
@@ -381,10 +439,12 @@ body {
 @media (max-width: 992px) {
   .info-h1 {
     font-size: 2rem;
+    animation: fadeInDown 1s ease-in-out;
   }
 
   .info-p {
     font-size: 0.9rem;
+    animation: fadeInUp 1s ease-in-out;
   }
 }
 
@@ -392,10 +452,12 @@ body {
 @media (max-width: 576px) {
   .info-h1 {
     font-size: 0.9rem;
+    animation: fadeInDown 1s ease-in-out;
   }
 
   .info-p {
     font-size: 0.7rem;
+    animation: fadeInUp 1s ease-in-out;
   }
 
   .info-img {
@@ -585,4 +647,13 @@ body {
   text-align: center;
   padding-bottom: 8px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline-light {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-light:hover {
+  background-color: #ffffff;
+  color: #000;
 }
